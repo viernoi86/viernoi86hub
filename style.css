@@ -1,0 +1,54 @@
+:root{--bg:#0c0e18;--ink:#e9ecf6;--mute:#8d93ab;--line:#232842;--card:#12152a;--acc:#8b7cff;--acc2:#4cc9f0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+body::before,body::after{content:"";position:fixed;z-index:-1;width:60vmax;height:60vmax;border-radius:50%;filter:blur(110px);opacity:.28;pointer-events:none}
+body::before{background:var(--acc);top:-30vmax;left:-20vmax;animation:drift 22s ease-in-out infinite alternate}
+body::after{background:var(--acc2);bottom:-35vmax;right:-25vmax;opacity:.16;animation:drift 28s ease-in-out infinite alternate-reverse}
+@keyframes drift{to{transform:translate(8vmax,6vmax) scale(1.15)}}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;margin:0 0 .5em;line-height:1.15}
+h1{font-size:clamp(2.6rem,8vw,5rem);font-weight:700;letter-spacing:-.03em}
+h2{font-size:1.5rem;font-weight:600}
+a{color:inherit}
+.wrap{max-width:900px;margin:0 auto;padding:0 22px}
+nav{display:flex;flex-wrap:wrap;gap:8px 24px;padding:22px 0;color:var(--mute);font-size:.95rem}
+nav a{text-decoration:none;transition:color .2s}
+nav a:hover,nav a[aria-current]{color:var(--ink)}
+nav .brand{margin-right:auto;color:var(--ink);font:600 1.05rem Sora,sans-serif}
+.hero{padding:70px 0 30px}
+.hero h1,.hero p{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero p{animation-delay:.15s;max-width:32em;font-size:1.15rem;color:var(--mute)}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}}
+section{padding:26px 0}
+.games{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.game{position:relative;display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;text-decoration:none;overflow:hidden;transition:transform .25s,border-color .25s}
+.game::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--x,50%) var(--y,0%),rgba(139,124,255,.22),transparent 70%);opacity:0;transition:opacity .25s}
+.game:hover,.game:focus-visible{transform:translateY(-4px);border-color:var(--acc)}
+.game:hover::before{opacity:1}
+.game h3{position:relative;font-size:1.2rem;margin-bottom:.3em}
+.game span{position:relative;color:var(--mute);font-size:.95rem}
+pre{background:var(--card);border:1px solid var(--line);border-radius:12px;color:var(--acc2);padding:16px;overflow-x:auto;font-size:.88rem;margin:0 0 12px}
+button{font:600 .95rem "DM Sans",sans-serif;color:#fff;background:var(--acc);border:0;border-radius:999px;padding:9px 20px;cursor:pointer;transition:transform .15s,filter .2s}
+button:hover{filter:brightness(1.12)}button:active{transform:scale(.96)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--acc2);outline-offset:3px}
+ul.feat{list-style:none;padding:0;margin:0;display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+ul.feat li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--mute);font-size:.95rem}
+ul.feat b{display:block;color:var(--ink);font-family:Sora,sans-serif;font-size:1rem;font-weight:600}
+table{border-collapse:collapse;width:100%;background:var(--card);border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid var(--line);padding:11px 14px;text-align:left}
+th{color:var(--mute);font-weight:500}
+.note{color:var(--mute)}
+footer{padding:36px 0 44px;color:var(--mute);font-size:.92rem}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.discord{display:inline-flex;align-items:center;color:var(--mute);transition:color .2s,transform .2s}
+.discord:hover,.discord:focus-visible{color:#7c8cff;transform:scale(1.12)}
+.discord svg{width:24px;height:24px;fill:currentColor}
+.btn{display:inline-block;margin-top:8px;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;border-radius:999px;padding:10px 22px;transition:transform .15s,filter .2s}
+.btn:hover{filter:brightness(1.12);transform:translateY(-2px)}
+.btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;border-radius:999px;padding:10px 22px;transition:transform .15s,filter .2s}
+.btn:hover{filter:brightness(1.12);transform:translateY(-2px)}
+.discord{display:inline-flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;font-weight:600;transition:color .2s,transform .2s}
+.discord svg{width:26px;height:26px;fill:currentColor}
+.discord:hover{color:#8ea1ff;transform:translateY(-2px)}
+nav .discord{color:var(--mute)}nav .discord:hover{color:#8ea1ff}
+.actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:22px}
