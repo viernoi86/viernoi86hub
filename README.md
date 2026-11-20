@@ -4,6 +4,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/viernoi86/viernoi86hu
 ```
 ## 🎮 Supported Games
 
+key systeme easy to unlock just join the discord server and use /getkey
+
 ```text
 [✓] Murder Mystery 2
 [✓] Arsenal
