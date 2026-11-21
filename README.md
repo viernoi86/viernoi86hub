@@ -50,5 +50,16 @@ key systeme easy to unlock just join the discord server and use /getkey
   - Anti fling
 
   </details>
+  
+<details>
+  <summary> Be a parkour ninja</summary>
+
+ #### 🔧 Features:
+  -  Expand Hitbox
+  -  ESP
+  -  Infinite Jump
+
+   </details>
+  
 
   
