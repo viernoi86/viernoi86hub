@@ -13,3 +13,12 @@ key systeme easy to unlock just join the discord server and use /getkey
 [✓] shooter no name
 
 ```
+<details>
+  <summary> Arsenal</summary>
+
+  #### 🔧 Features:
+  - Aimbot  
+  - Hitbox Expander  
+  - Rapid Fire
+  - Infinite Ammo
+  - Teleport to Enemy 
